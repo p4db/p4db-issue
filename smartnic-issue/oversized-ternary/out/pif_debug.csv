@@ -1,0 +1,12 @@
+"object_name","filename","lineno","listlabel"
+parse_tcp,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,219,pif_parrep_state_parse_tcp
+parse_udp,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,226,pif_parrep_state_parse_udp
+start,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,96,pif_parrep_state_start
+parse_icmp,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,212,pif_parrep_state_parse_icmp
+parse_ipv6,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,201,pif_parrep_state_parse_ipv6
+parse_ipv4,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,184,pif_parrep_state_parse_ipv4
+parse_ethernet,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,125,pif_parrep_state_parse_ethernet
+_condition_0,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,0,pif_ctlflow_state_ingress_flow__condition_0
+ternary_match_mat,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,237,pif_ctlflow_state_ingress_flow_ternary_match_mat
+forward_mat,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,250,pif_ctlflow_state_ingress_flow_forward_mat
+forward,C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4,233,pif_action_state_forward

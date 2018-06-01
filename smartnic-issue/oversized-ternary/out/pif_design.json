@@ -1,0 +1,291 @@
+{
+    "generic": {
+        "tables_info": {
+            "ternary_match_mat": {
+                "max_entries": 65536, 
+                "allowed_actions": [
+                    "forward"
+                ], 
+                "name": "ternary_match_mat"
+            }, 
+            "forward_mat": {
+                "max_entries": 1, 
+                "allowed_actions": [
+                    "forward"
+                ], 
+                "name": "forward_mat"
+            }
+        }, 
+        "action_info": {
+            "forward": {
+                "name": "forward", 
+                "action_data": {
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }
+        }
+    }, 
+    "vendor": {
+        "register_info": {}, 
+        "backend_source_info": {
+            "date": "2018/06/01 03:13:31", 
+            "source_files": "oversized-ternary.yml"
+        }, 
+        "counters_info": {}, 
+        "meter_info": {}, 
+        "frontend_source_info": {
+            "date": "2018/06/01 03:13:30", 
+            "source_files": [
+                "C:\\Users\\Zhou Yu\\Desktop\\p4db-issues\\smartnic-issue\\oversized-ternary\\main.p4"
+            ]
+        }, 
+        "tables_info": {
+            "ternary_match_mat": {
+                "name": "ternary_match_mat", 
+                "matches": [
+                    {
+                        "field": "ipv6.dstAddr", 
+                        "type": "ternary", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "ipv6", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 2, 
+                                    "name": "ipv6_valid", 
+                                    "value": 2, 
+                                    "lmbitoff": 26
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 96, 
+                                "name": "__dstAddr_0", 
+                                "lmbitoff": 352
+                            }, 
+                            {
+                                "width": 32, 
+                                "fldbitoff": 64, 
+                                "name": "__dstAddr_1", 
+                                "lmbitoff": 384
+                            }, 
+                            {
+                                "width": 32, 
+                                "fldbitoff": 32, 
+                                "name": "__dstAddr_2", 
+                                "lmbitoff": 416
+                            }, 
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "__dstAddr_3", 
+                                "lmbitoff": 448
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "tcp.srcPort", 
+                        "type": "ternary", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "tcp", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 3, 
+                                    "name": "tcp_valid", 
+                                    "value": 4, 
+                                    "lmbitoff": 16
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 16, 
+                                "fldbitoff": 0, 
+                                "name": "srcPort", 
+                                "lmbitoff": 496
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "tcp.dstPort", 
+                        "type": "ternary", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "tcp", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 3, 
+                                    "name": "tcp_valid", 
+                                    "value": 4, 
+                                    "lmbitoff": 16
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 16, 
+                                "fldbitoff": 0, 
+                                "name": "dstPort", 
+                                "lmbitoff": 480
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "ipv6.srcAddr", 
+                        "type": "ternary", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "ipv6", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 2, 
+                                    "name": "ipv6_valid", 
+                                    "value": 2, 
+                                    "lmbitoff": 26
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 96, 
+                                "name": "__srcAddr_0", 
+                                "lmbitoff": 224
+                            }, 
+                            {
+                                "width": 32, 
+                                "fldbitoff": 64, 
+                                "name": "__srcAddr_1", 
+                                "lmbitoff": 256
+                            }, 
+                            {
+                                "width": 32, 
+                                "fldbitoff": 32, 
+                                "name": "__srcAddr_2", 
+                                "lmbitoff": 288
+                            }, 
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "__srcAddr_3", 
+                                "lmbitoff": 320
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "forward"
+                ], 
+                "id": 0, 
+                "max_entries": 65536, 
+                "data_shift": 4, 
+                "data_size": 16
+            }, 
+            "forward_mat": {
+                "name": "forward_mat", 
+                "matches": [], 
+                "allowed_actions": [
+                    "forward"
+                ], 
+                "id": 1, 
+                "max_entries": 1, 
+                "data_shift": 4, 
+                "data_size": 16
+            }
+        }, 
+        "action_info": {
+            "forward": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "port", 
+                        "name": "port", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 16
+                    }, 
+                    {
+                        "pad_cnt": 2, 
+                        "pad_type": "uint8_t", 
+                        "actiondata": null, 
+                        "name": "__pif_padding", 
+                        "split": false, 
+                        "doc": "padding", 
+                        "pad_szbytes": 1, 
+                        "size": 8
+                    }
+                ], 
+                "name": "forward", 
+                "action_data": {
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": false, 
+                "id": 0, 
+                "tableno_field": "__pif_table_no"
+            }
+        }, 
+        "multicast": {
+            "table_rtsym": "_pif_mcast_table", 
+            "group_count": 16, 
+            "group_size": 16
+        }, 
+        "build_uuid": [
+            1787169536, 
+            3165021184, 
+            1699287528, 
+            3269081886
+        ], 
+        "parser_value_set_info": {}, 
+        "digests_info": {}
+    }
+}

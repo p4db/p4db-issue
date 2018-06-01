@@ -1,0 +1,289 @@
+##########################################
+# Header instance definitions            #
+##########################################
+
+"udp" :
+    type : header
+    fields : 
+        - "srcPort" : 16
+        - "dstPort" : 16
+        - "length_" : 16
+        - "checksum" : 16
+
+"tcp" :
+    type : header
+    fields : 
+        - "srcPort" : 16
+        - "dstPort" : 16
+        - "seqNo" : 32
+        - "ackNo" : 32
+        - "dataOffset" : 4
+        - "res" : 4
+        - "flags" : 8
+        - "window" : 16
+        - "checksum" : 16
+        - "urgentPtr" : 16
+
+"ipv4" :
+    type : header
+    fields : 
+        - "version" : 4
+        - "ihl" : 4
+        - "diffserv" : 8
+        - "totalLen" : 16
+        - "identification" : 16
+        - "flags" : 3
+        - "fragOffset" : 13
+        - "ttl" : 8
+        - "protocol" : 8
+        - "hdrChecksum" : 16
+        - "srcAddr" : 32
+        - "dstAddr" : 32
+    calculated_fields :
+        - field : "hdrChecksum"
+          type : "verify"
+          func : "ipv4_checksum"
+          condition : "(ipv4.ihl) == (5)"
+        - field : "hdrChecksum"
+          type : "update"
+          func : "ipv4_checksum"
+          condition : "(ipv4.ihl) == (5)"
+
+"ipv6" :
+    type : header
+    fields : 
+        - "version" : 4
+        - "trafficClass" : 8
+        - "flowLabel" : 20
+        - "payloadLen" : 16
+        - "nextHdr" : 8
+        - "hopLimit" : 8
+        - "srcAddr" : 128
+        - "dstAddr" : 128
+
+"ethernet" :
+    type : header
+    fields : 
+        - "dstAddr" : 48
+        - "srcAddr" : 48
+        - "etherType" : 16
+
+"icmp" :
+    type : header
+    fields : 
+        - "typeCode" : 16
+        - "hdrChecksum" : 16
+
+"standard_metadata" :
+    type : metadata
+    fields : 
+        - "ingress_port" : 10
+        - "packet_length" : 14
+        - "egress_spec" : 16
+        - "egress_port" : 16
+        - "egress_instance" : 10
+        - "instance_type" : 4
+        - "clone_spec" : 32
+        - "_padding" : 2
+
+##########################################
+# Field list definitions                 #
+##########################################
+
+"ipv4_checksum_list" :
+    type : field_list
+    fields :
+        -  "ipv4.version"
+        -  "ipv4.ihl"
+        -  "ipv4.diffserv"
+        -  "ipv4.totalLen"
+        -  "ipv4.identification"
+        -  "ipv4.flags"
+        -  "ipv4.fragOffset"
+        -  "ipv4.ttl"
+        -  "ipv4.protocol"
+        -  "ipv4.srcAddr"
+        -  "ipv4.dstAddr"
+
+##########################################
+# Field list calculations                #
+##########################################
+
+"ipv4_checksum" :
+    type : field_list_calculation
+    algorithm : "csum16"
+    output_width : 16
+    inputs :
+        - "ipv4_checksum_list"
+
+##########################################
+# Parse states                           #
+##########################################
+
+"start" :
+    type : parse_state
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 96
+
+"parse_ethernet" :
+    type : parse_state
+    extracts :
+        - "ethernet"
+    select_value :
+        - "ethernet.etherType"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 125
+
+"parse_ipv4" :
+    type : parse_state
+    extracts :
+        - "ipv4"
+    select_value :
+        - "ipv4.fragOffset"
+        - "ipv4.ihl"
+        - "ipv4.protocol"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 184
+
+"parse_ipv6" :
+    type : parse_state
+    extracts :
+        - "ipv6"
+    select_value :
+        - "ipv6.nextHdr"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 201
+
+"parse_icmp" :
+    type : parse_state
+    extracts :
+        - "icmp"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 212
+
+"parse_tcp" :
+    type : parse_state
+    extracts :
+        - "tcp"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 219
+
+"parse_udp" :
+    type : parse_state
+    extracts :
+        - "udp"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 226
+
+##########################################
+# Parser                                 #
+##########################################
+
+parser :
+    type : parser
+    format : dot
+    start_state : "start"
+    implementation : >-
+        digraph {
+            start -> parse_ethernet [value="default", mask="none", order="0"]
+            parse_ethernet -> parse_ipv4 [value="0x800", mask="none", order="0"]
+            parse_ethernet -> parse_ipv6 [value="0x86dd", mask="none", order="1"]
+            parse_ethernet -> _condition_0 [value="default", mask="none", order="2"]
+            parse_ipv4 -> parse_icmp [value="0x501", mask="none", order="0"]
+            parse_ipv4 -> parse_tcp [value="0x506", mask="none", order="1"]
+            parse_ipv4 -> parse_udp [value="0x511", mask="none", order="2"]
+            parse_ipv4 -> _condition_0 [value="default", mask="none", order="3"]
+            parse_ipv6 -> parse_icmp [value="0x3a", mask="none", order="0"]
+            parse_ipv6 -> parse_tcp [value="0x6", mask="none", order="1"]
+            parse_ipv6 -> _condition_0 [value="default", mask="none", order="2"]
+            parse_icmp -> _condition_0 [value="default", mask="none", order="0"]
+            parse_tcp -> _condition_0 [value="default", mask="none", order="0"]
+            parse_udp -> _condition_0 [value="default", mask="none", order="0"]
+        }
+
+##########################################
+# Action sets                            #
+##########################################
+
+"forward" :
+    type : action
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 233
+    parameter_list :
+        - "port" : 16
+    implementation : >-
+        modify_field(standard_metadata.egress_spec, port);
+
+##########################################
+# Ingress and Egress tables              #
+##########################################
+
+"ternary_match_mat":
+    type : table
+    match_on : 
+        "ipv6.srcAddr" : "ternary"
+        "ipv6.dstAddr" : "ternary"
+        "tcp.srcPort" : "ternary"
+        "tcp.dstPort" : "ternary"
+    allowed_actions : 
+        - "forward"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 237
+
+"forward_mat":
+    type : table
+    allowed_actions : 
+        - "forward"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 250
+
+##########################################
+# Ingress conditionals sets              #
+##########################################
+
+"_condition_0":
+    type : conditional
+    format : bracketed_expr
+    condition : "(valid(ipv6)) and (valid(tcp))"
+    src_filename : 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    src_lineno : 0
+
+##########################################
+# Ingress control flow                   #
+##########################################
+
+ingress_flow:
+    type : control_flow
+    doc : "control flow for ingress"
+    format : dot
+    start_state : "_condition_0"
+    implementation : >-
+        digraph {
+            _condition_0 -> forward_mat [condition = false]
+            _condition_0 -> ternary_match_mat [condition = true]
+            ternary_match_mat -> exit_control_flow [action = always]
+            forward_mat -> exit_control_flow [action = always]
+        }
+
+##########################################
+# Processor layout                       #
+##########################################
+
+layout:
+    type : processor_layout
+    format : list
+    implementation :
+        - parser
+        - ingress
+
+##########################################
+# Source info                            #
+##########################################
+
+source_info :
+    type : source_info
+    date : "2018/06/01 03:13:30"
+    source_files : 
+        - 'C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\main.p4'
+    output_file : 'oversized-ternary.yml'
+

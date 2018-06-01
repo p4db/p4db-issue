@@ -1,0 +1,9 @@
+.%scope file "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\apps\pif_app_nfd\include\config.h"
+.%scope function multiply_24x8 _multiply_24x8 "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\lib\pif\include\pif_common.h" 56 71
+.%arg x 0 x_228_V$467
+.%arg y 0 y_228_V$468
+.%var result 0 result_228 LIX
+.%scope end
+.%scope function pif_digest_init _pif_digest_init "C:\Users\Zhou Yu\Desktop\p4db-issues\smartnic-issue\oversized-ternary\out\pif_digests.c" 12 14
+.%scope end
+.%type U4

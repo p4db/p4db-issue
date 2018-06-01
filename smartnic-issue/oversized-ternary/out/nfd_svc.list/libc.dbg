@@ -1,0 +1,543 @@
+.%scope file "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\apps\pif_app_nfd\include\config.h"
+.%scope function abs _abs "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 25 28
+.%arg n 0 n_76_V$c
+.%scope end
+.%scope function labs _labs "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 34 37
+.%arg n 0 n_77_V$e
+.%scope end
+.%scope function islower _islower "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 43 46
+.%arg c 0 c_78_V$10
+.%scope end
+.%scope function tolower _tolower "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 52 60
+.%arg c 0 c_79_V$12
+.%scope end
+.%scope function isupper _isupper "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 66 69
+.%arg c 0 c_81_V$14
+.%scope end
+.%scope function toupper _toupper "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 75 83
+.%arg c 0 c_82_V$16
+.%scope end
+.%scope function strlen_lmem _strlen_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 85 93
+.%arg s 1 s_84_V$18
+.%var p 1 p_84 LIX
+.%scope end
+.%scope function strcmp_cls _strcmp_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 96 104
+.%arg s1 3 s1_86_V$1b
+.%arg s2 3 s2_86_V$1c
+.%scope end
+.%scope function strcmp_lmem _strcmp_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 107 115
+.%arg s1 1 s1_88_V$1e
+.%arg s2 1 s2_88_V$1f
+.%scope end
+.%scope function strncmp_cls _strncmp_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 118 132
+.%arg s1 3 s1_90_V$21
+.%arg s2 3 s2_90_V$22
+.%arg count 5 count_90_V$23
+.%scope end
+.%scope function strncmp_lmem _strncmp_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 135 149
+.%arg s1 1 s1_93_V$25
+.%arg s2 1 s2_93_V$26
+.%arg count 5 count_93_V$27
+.%scope end
+.%scope function strcpy_cls _strcpy_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 151 157
+.%arg dest 3 dest_96_V$29
+.%arg src 3 src_96_V$2a
+.%var ret 3 ret_96 LIX
+.%scope end
+.%scope function strcpy_lmem _strcpy_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 159 165
+.%arg dest 1 dest_97_V$2d
+.%arg src 1 src_97_V$2e
+.%var ret 1 ret_97 LIX
+.%scope end
+.%scope function strncpy_cls _strncpy_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 168 178
+.%arg dest 3 dest_98_V$31
+.%arg src 3 src_98_V$32
+.%arg count 5 count_98_V$33
+.%var ret 3 ret_98 LIX
+.%scope end
+.%scope function strncpy_lmem _strncpy_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 181 191
+.%arg dest 1 dest_99_V$36
+.%arg src 1 src_99_V$37
+.%arg count 5 count_99_V$38
+.%var ret 1 ret_99 LIX
+.%scope end
+.%scope function strcat_cls _strcat_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 194 205
+.%arg dest 3 dest_100_V$3b
+.%arg src 3 src_100_V$3c
+.%var ret 3 ret_100 LIX
+.%scope end
+.%scope function strcat_lmem _strcat_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 208 219
+.%arg dest 1 dest_101_V$3f
+.%arg src 1 src_101_V$40
+.%var ret 1 ret_101 LIX
+.%scope end
+.%scope function strncat_cls _strncat_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 222 241
+.%arg dest 3 dest_102_V$43
+.%arg src 3 src_102_V$44
+.%arg count 5 count_102_V$45
+.%var ret 3 ret_102 LIX
+.%scope end
+.%scope function strncat_lmem _strncat_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 244 263
+.%arg dest 1 dest_105_V$48
+.%arg src 1 src_105_V$49
+.%arg count 5 count_105_V$4a
+.%var ret 1 ret_105 LIX
+.%scope end
+.%scope function strchr_cls _strchr_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 265 272
+.%arg s 3 s_108_V$4d
+.%arg c 4 c_108_V$4e
+.%scope end
+.%scope function strchr_lmem _strchr_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 274 281
+.%arg s 1 s_110_V$50
+.%arg c 4 c_110_V$51
+.%scope end
+.%scope function strrchr_cls _strrchr_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 284 292
+.%arg s 3 s_112_V$53
+.%arg c 4 c_112_V$54
+.%var head 3 head_112 LIX
+.%scope end
+.%scope function strrchr_lmem _strrchr_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 294 302
+.%arg s 1 s_113_V$57
+.%arg c 4 c_113_V$58
+.%var head 1 head_113 LIX
+.%scope end
+.%scope function __strto_l_ul_cls ___strto_l_ul_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 304 415
+.%arg s 3 s_114_V$5b
+.%arg ps_end 6 ps_end_114_V$5c
+.%arg base 0 base_114_V$5d
+.%arg is_signed 0 is_signed_114_V$5e
+.%var neg 0 neg_114 LIX
+.%var overflow 0 overflow_114 LIX
+.%var ret 5 ret_114 LIX
+.%var max_quo 5 max_quo_114 LIX
+.%var max_rem 5 max_rem_114 LIX
+.%var n_digit 5 n_digit_114 LIX
+.%var s0 3 s0_114 LIX
+.%scope block 350 386
+.%var digit 5 digit_122 LIX
+.%scope end
+.%scope end
+.%scope function __strto_l_ul_lmem ___strto_l_ul_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 418 529
+.%arg s 1 s_136_V$68
+.%arg ps_end 7 ps_end_136_V$69
+.%arg base 0 base_136_V$6a
+.%arg is_signed 0 is_signed_136_V$6b
+.%var neg 0 neg_136 LIX
+.%var overflow 0 overflow_136 LIX
+.%var ret 5 ret_136 LIX
+.%var max_quo 5 max_quo_136 LIX
+.%var max_rem 5 max_rem_136 LIX
+.%var n_digit 5 n_digit_136 LIX
+.%var s0 1 s0_136 LIX
+.%scope block 464 500
+.%var digit 5 digit_144 LIX
+.%scope end
+.%scope end
+.%scope function strtol_cls _strtol_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 532 535
+.%arg s 3 s_158_V$75
+.%arg ps_end 6 ps_end_158_V$76
+.%arg base 0 base_158_V$77
+.%scope end
+.%scope function strtol_lmem _strtol_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 537 540
+.%arg s 1 s_159_V$79
+.%arg ps_end 7 ps_end_159_V$7a
+.%arg base 0 base_159_V$7b
+.%scope end
+.%scope function strtoul_cls _strtoul_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 543 546
+.%arg s 3 s_160_V$7d
+.%arg ps_end 6 ps_end_160_V$7e
+.%arg base 0 base_160_V$7f
+.%scope end
+.%scope function strtoul_lmem _strtoul_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 548 551
+.%arg s 1 s_161_V$81
+.%arg ps_end 7 ps_end_161_V$82
+.%arg base 0 base_161_V$83
+.%scope end
+.%scope function memcpy_cls_cls _memcpy_cls_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 559 595
+.%arg dest 8 dest_162_V$85
+.%arg src 8 src_162_V$86
+.%arg n 5 n_162_V$87
+.%var p 5 p_162 LIX
+.%var q 5 q_162 LIX
+.%scope end
+.%scope function memcpy_cls_lmem _memcpy_cls_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 598 635
+.%arg dest 8 dest_168_V$8b
+.%arg src 10 src_168_V$8c
+.%arg n 5 n_168_V$8d
+.%var p 5 p_168 LIX
+.%var q 5 q_168 LIX
+.%scope end
+.%scope function memcpy_lmem_cls _memcpy_lmem_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 638 674
+.%arg dest 10 dest_174_V$91
+.%arg src 8 src_174_V$92
+.%arg n 5 n_174_V$93
+.%var p 5 p_174 LIX
+.%var q 5 q_174 LIX
+.%scope end
+.%scope function memcpy_lmem_lmem _memcpy_lmem_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 676 712
+.%arg dest 10 dest_180_V$97
+.%arg src 10 src_180_V$98
+.%arg n 5 n_180_V$99
+.%var p 5 p_180 LIX
+.%var q 5 q_180 LIX
+.%scope end
+.%scope function memset_cls _memset_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 714 748
+.%arg dest 8 dest_186_V$9d
+.%arg c 0 c_186_V$9e
+.%arg n 5 n_186_V$9f
+.%var x 5 x_186 LIX
+.%var p 5 p_186 LIX
+.%scope block 721 730
+.%var xx 11 xx_187 LIX
+.%scope end
+.%scope end
+.%scope function memset_lmem _memset_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 751 785
+.%arg dest 10 dest_192_V$a4
+.%arg c 0 c_192_V$a5
+.%arg n 5 n_192_V$a6
+.%var x 5 x_192 LIX
+.%var p 5 p_192 LIX
+.%scope block 758 767
+.%var xx 11 xx_193 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_cls_cls _memcmp_cls_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 788 830
+.%arg buf1 8 buf1_198_V$ab
+.%arg buf2 8 buf2_198_V$ac
+.%arg n 5 n_198_V$ad
+.%var p 5 p_198 LIX
+.%var q 5 q_198 LIX
+.%scope block 797 812
+.%var v 5 v_200 LIX
+.%var w 5 w_200 LIX
+.%scope end
+.%scope block 816 827
+.%var v 2 v_202 LIX
+.%var w 2 w_202 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_cls_lmem _memcmp_cls_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 833 874
+.%arg buf1 8 buf1_204_V$b5
+.%arg buf2 10 buf2_204_V$b6
+.%arg n 5 n_204_V$b7
+.%var p 5 p_204 LIX
+.%var q 5 q_204 LIX
+.%scope block 841 856
+.%var v 5 v_206 LIX
+.%var w 5 w_206 LIX
+.%scope end
+.%scope block 860 871
+.%var v 2 v_208 LIX
+.%var w 2 w_208 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_lmem_cls _memcmp_lmem_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 877 918
+.%arg buf1 10 buf1_210_V$bf
+.%arg buf2 8 buf2_210_V$c0
+.%arg n 5 n_210_V$c1
+.%var p 5 p_210 LIX
+.%var q 5 q_210 LIX
+.%scope block 885 900
+.%var v 5 v_212 LIX
+.%var w 5 w_212 LIX
+.%scope end
+.%scope block 904 915
+.%var v 2 v_214 LIX
+.%var w 2 w_214 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_lmem_lmem _memcmp_lmem_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 920 961
+.%arg buf1 10 buf1_216_V$c9
+.%arg buf2 10 buf2_216_V$ca
+.%arg n 5 n_216_V$cb
+.%var p 5 p_216 LIX
+.%var q 5 q_216 LIX
+.%scope block 928 943
+.%var v 5 v_218 LIX
+.%var w 5 w_218 LIX
+.%scope end
+.%scope block 947 958
+.%var v 2 v_220 LIX
+.%var w 2 w_220 LIX
+.%scope end
+.%scope end
+.%scope function memmove_lmem_lmem _memmove_lmem_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 964 984
+.%arg dest 10 dest_222_V$d3
+.%arg src 10 src_222_V$d4
+.%arg n 5 n_222_V$d5
+.%var p 5 p_222 LIX
+.%var q 5 q_222 LIX
+.%scope end
+.%scope function memchr_lmem _memchr_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 987 1053
+.%arg src 10 src_225_V$d9
+.%arg c 0 c_225_V$da
+.%arg n 5 n_225_V$db
+.%var i 0 i_225 LIX
+.%var p 5 p_225 LIX
+.%var off 0 off_225 LIX
+.%scope block 996 1013
+.%var v 11 v_227 LIX
+.%scope end
+.%scope block 1019 1036
+.%var v 5 v_231 LIX
+.%scope end
+.%scope block 1040 1050
+.%var v 2 v_234 LIX
+.%scope end
+.%scope end
+.%scope function memchr_cls _memchr_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1055 1121
+.%arg src 8 src_236_V$e3
+.%arg c 0 c_236_V$e4
+.%arg n 5 n_236_V$e5
+.%var i 0 i_236 LIX
+.%var p 5 p_236 LIX
+.%var off 0 off_236 LIX
+.%scope block 1064 1081
+.%var v 11 v_238 LIX
+.%scope end
+.%scope block 1087 1104
+.%var v 5 v_242 LIX
+.%scope end
+.%scope block 1108 1118
+.%var v 2 v_245 LIX
+.%scope end
+.%scope end
+.%scope function strlen_mem _strlen_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1127 1135
+.%arg s 12 s_247_V$ed
+.%var p 12 p_247 LIX
+.%scope end
+.%scope function strcmp_mem _strcmp_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1149 1157
+.%arg s1 12 s1_249_V$f0
+.%arg s2 12 s2_249_V$f1
+.%scope end
+.%scope function strncmp_mem _strncmp_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1172 1186
+.%arg s1 12 s1_251_V$f3
+.%arg s2 12 s2_251_V$f4
+.%arg count 5 count_251_V$f5
+.%scope end
+.%scope function strcpy_mem _strcpy_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1197 1203
+.%arg dest 12 dest_254_V$f7
+.%arg src 12 src_254_V$f8
+.%var ret 12 ret_254 LIX
+.%scope end
+.%scope function strncpy_mem _strncpy_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1214 1224
+.%arg dest 12 dest_255_V$fb
+.%arg src 12 src_255_V$fc
+.%arg count 5 count_255_V$fd
+.%var ret 12 ret_255 LIX
+.%scope end
+.%scope function strcat_mem _strcat_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1236 1247
+.%arg dest 12 dest_256_V$100
+.%arg src 12 src_256_V$101
+.%var ret 12 ret_256 LIX
+.%scope end
+.%scope function strncat_mem _strncat_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1258 1277
+.%arg dest 12 dest_257_V$104
+.%arg src 12 src_257_V$105
+.%arg count 5 count_257_V$106
+.%var ret 12 ret_257 LIX
+.%scope end
+.%scope function strchr_mem _strchr_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1287 1294
+.%arg s 12 s_260_V$109
+.%arg c 4 c_260_V$10a
+.%scope end
+.%scope function strrchr_mem _strrchr_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1306 1314
+.%arg s 12 s_262_V$10c
+.%arg c 4 c_262_V$10d
+.%var head 12 head_262 LIX
+.%scope end
+.%scope function __strto_l_ul_mem ___strto_l_ul_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1321 1432
+.%arg s 12 s_263_V$110
+.%arg ps_end 13 ps_end_263_V$111
+.%arg base 0 base_263_V$112
+.%arg is_signed 0 is_signed_263_V$113
+.%var neg 0 neg_263 LIX
+.%var overflow 0 overflow_263 LIX
+.%var ret 5 ret_263 LIX
+.%var max_quo 5 max_quo_263 LIX
+.%var max_rem 5 max_rem_263 LIX
+.%var n_digit 5 n_digit_263 LIX
+.%var s0 12 s0_263 LIX
+.%scope block 1367 1403
+.%var digit 5 digit_271 LIX
+.%scope end
+.%scope end
+.%scope function strtol_mem _strtol_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1436 1439
+.%arg s 12 s_285_V$11d
+.%arg ps_end 13 ps_end_285_V$11e
+.%arg base 0 base_285_V$11f
+.%scope end
+.%scope function strtoul_mem _strtoul_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1441 1444
+.%arg s 12 s_286_V$121
+.%arg ps_end 13 ps_end_286_V$122
+.%arg base 0 base_286_V$123
+.%scope end
+.%scope function memcpy_mem_mem _memcpy_mem_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1446 1483
+.%arg dest 14 dest_287_V$125
+.%arg src 14 src_287_V$126
+.%arg n 5 n_287_V$127
+.%var p 5 p_287 LIX
+.%var q 5 q_287 LIX
+.%scope end
+.%scope function memcpy_mem_cls _memcpy_mem_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1485 1521
+.%arg dest 14 dest_293_V$12b
+.%arg src 8 src_293_V$12c
+.%arg n 5 n_293_V$12d
+.%var p 5 p_293 LIX
+.%var q 5 q_293 LIX
+.%scope end
+.%scope function memcpy_mem_lmem _memcpy_mem_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1523 1559
+.%arg dest 14 dest_299_V$131
+.%arg src 10 src_299_V$132
+.%arg n 5 n_299_V$133
+.%var p 5 p_299 LIX
+.%var q 5 q_299 LIX
+.%scope end
+.%scope function memcpy_cls_mem _memcpy_cls_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1563 1599
+.%arg dest 8 dest_305_V$137
+.%arg src 14 src_305_V$138
+.%arg n 5 n_305_V$139
+.%var p 5 p_305 LIX
+.%var q 5 q_305 LIX
+.%scope end
+.%scope function memcpy_lmem_mem _memcpy_lmem_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1602 1638
+.%arg dest 10 dest_311_V$13d
+.%arg src 14 src_311_V$13e
+.%arg n 5 n_311_V$13f
+.%var p 5 p_311 LIX
+.%var q 5 q_311 LIX
+.%scope end
+.%scope function memmove_mem_mem _memmove_mem_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1654 1674
+.%arg dest 14 dest_317_V$143
+.%arg src 14 src_317_V$144
+.%arg n 5 n_317_V$145
+.%var p 5 p_317 LIX
+.%var q 5 q_317 LIX
+.%scope end
+.%scope function memmove_mem_lmem _memmove_mem_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1677 1680
+.%arg dest 14 dest_320_V$149
+.%arg src 10 src_320_V$14a
+.%arg n 5 n_320_V$14b
+.%scope end
+.%scope function memmove_lmem_mem _memmove_lmem_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1682 1685
+.%arg dest 10 dest_321_V$14d
+.%arg src 14 src_321_V$14e
+.%arg n 5 n_321_V$14f
+.%scope end
+.%scope function memset_mem _memset_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1694 1728
+.%arg dest 14 dest_322_V$151
+.%arg c 0 c_322_V$152
+.%arg n 5 n_322_V$153
+.%var x 5 x_322 LIX
+.%var p 5 p_322 LIX
+.%scope block 1701 1710
+.%var xx 11 xx_323 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_mem_mem _memcmp_mem_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1743 1784
+.%arg buf1 14 buf1_328_V$158
+.%arg buf2 14 buf2_328_V$159
+.%arg n 5 n_328_V$15a
+.%var p 5 p_328 LIX
+.%var q 5 q_328 LIX
+.%scope block 1751 1766
+.%var v 5 v_330 LIX
+.%var w 5 w_330 LIX
+.%scope end
+.%scope block 1770 1781
+.%var v 2 v_332 LIX
+.%var w 2 w_332 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_mem_cls _memcmp_mem_cls "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1785 1826
+.%arg buf1 14 buf1_334_V$162
+.%arg buf2 8 buf2_334_V$163
+.%arg n 5 n_334_V$164
+.%var p 5 p_334 LIX
+.%var q 5 q_334 LIX
+.%scope block 1793 1808
+.%var v 5 v_336 LIX
+.%var w 5 w_336 LIX
+.%scope end
+.%scope block 1812 1823
+.%var v 2 v_338 LIX
+.%var w 2 w_338 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_mem_lmem _memcmp_mem_lmem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1828 1869
+.%arg buf1 14 buf1_340_V$16c
+.%arg buf2 10 buf2_340_V$16d
+.%arg n 5 n_340_V$16e
+.%var p 5 p_340 LIX
+.%var q 5 q_340 LIX
+.%scope block 1836 1851
+.%var v 5 v_342 LIX
+.%var w 5 w_342 LIX
+.%scope end
+.%scope block 1855 1866
+.%var v 2 v_344 LIX
+.%var w 2 w_344 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_cls_mem _memcmp_cls_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1872 1913
+.%arg buf1 8 buf1_346_V$176
+.%arg buf2 14 buf2_346_V$177
+.%arg n 5 n_346_V$178
+.%var p 5 p_346 LIX
+.%var q 5 q_346 LIX
+.%scope block 1880 1895
+.%var v 5 v_348 LIX
+.%var w 5 w_348 LIX
+.%scope end
+.%scope block 1899 1910
+.%var v 2 v_350 LIX
+.%var w 2 w_350 LIX
+.%scope end
+.%scope end
+.%scope function memcmp_lmem_mem _memcmp_lmem_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1915 1956
+.%arg buf1 10 buf1_352_V$180
+.%arg buf2 14 buf2_352_V$181
+.%arg n 5 n_352_V$182
+.%var p 5 p_352 LIX
+.%var q 5 q_352 LIX
+.%scope block 1923 1938
+.%var v 5 v_354 LIX
+.%var w 5 w_354 LIX
+.%scope end
+.%scope block 1942 1953
+.%var v 2 v_356 LIX
+.%var w 2 w_356 LIX
+.%scope end
+.%scope end
+.%scope function memchr_mem _memchr_mem "C:\NFP_SDK_6.0.3\components\standardlibrary\microc\src\libc.c" 1968 2034
+.%arg src 14 src_358_V$18a
+.%arg c 0 c_358_V$18b
+.%arg n 5 n_358_V$18c
+.%var i 0 i_358 LIX
+.%var p 5 p_358 LIX
+.%var off 0 off_358 LIX
+.%scope block 1977 1994
+.%var v 11 v_360 LIX
+.%scope end
+.%scope block 2000 2017
+.%var v 5 v_364 LIX
+.%scope end
+.%scope block 2021 2031
+.%var v 2 v_367 LIX
+.%scope end
+.%scope end
+.%type I4
+.%type P6 2
+.%type U1
+.%type P12 4
+.%type I1
+.%type U4
+.%type P2 3
+.%type P2 1
+.%type P12 9
+.%type U4
+.%type P6 9
+.%type U8
+.%type P3 4
+.%type P2 12
+.%type P3 9

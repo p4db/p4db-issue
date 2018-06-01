@@ -1,0 +1,9 @@
+{'flowkey_sz_lw': 10,
+ 'lookup_fields': ['ipv6.dstAddr',
+                   'tcp.srcPort',
+                   'tcp.dstPort',
+                   'ipv6.srcAddr'],
+ 'metadata_fields': [],
+ 'metadata_packed': OrderedDict(),
+ 'metadata_packed_width': 0,
+ 'tier_hdrs': OrderedDict([(0, OrderedDict([('start', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (1, OrderedDict([('parse_ethernet', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (2, OrderedDict([('parse_ipv6', {'total_width': 256, 'raw': OrderedDict([('ipv6.dstAddr', 1), ('ipv6.srcAddr', 1)]), 'packed': OrderedDict([('ipv6.__dstAddr_0', 32), ('ipv6.__dstAddr_1', 32), ('ipv6.__dstAddr_2', 32), ('ipv6.__dstAddr_3', 32), ('ipv6.__srcAddr_0', 32), ('ipv6.__srcAddr_1', 32), ('ipv6.__srcAddr_2', 32), ('ipv6.__srcAddr_3', 32)])}), ('parse_ipv4', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (3, OrderedDict([('parse_tcp', {'total_width': 32, 'raw': OrderedDict([('tcp.srcPort', 1), ('tcp.dstPort', 1)]), 'packed': OrderedDict([('tcp.srcPort', 16), ('tcp.dstPort', 16)])}), ('parse_udp', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()}), ('parse_icmp', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (4, OrderedDict([('_condition_0', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})]))])}

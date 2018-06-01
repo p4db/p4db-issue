@@ -1,0 +1,89 @@
+.%scope file "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\apps\pif_app_nfd\include\config.h"
+.%scope function multiply_24x8 _multiply_24x8 "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\lib\pif\include\pif_common.h" 56 71
+.%arg x 0 x_261_V$467
+.%arg y 0 y_261_V$468
+.%var result 0 result_261 LIX
+.%scope end
+.%scope function mem_meter _mem_meter "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\lib\pif\src\pif_meter.c" 19 36
+.%arg mval 1 mval_263_V$46b
+.%arg addr 2 addr_263_V$46c
+.%arg colour 4 colour_263_V$46d
+.%arg rfc 4 rfc_263_V$46e
+.%var meter_sig 5 meter_sig_263 LIX
+.%var high_addr 0 high_addr_263 LIX
+.%var low_addr 0 low_addr_263 LIX
+.%scope end
+.%scope function mult32_oflow0 _mult32_oflow0 "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\lib\pif\src\pif_meter.c" 42 61
+.%arg v0 0 v0_264_V$474
+.%arg v1 0 v1_264_V$475
+.%var result 0 result_264 LIX
+.%var result_hi 0 result_hi_264 LIX
+.%scope end
+.%scope function update_meter_timers _update_meter_timers "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\lib\pif\src\pif_meter.c" 64 167
+.%arg meter 6 meter_265_V$479
+.%var ctime 10 ctime_265 LIX
+.%var ctime_upper 0 ctime_upper_265 LIX
+.%var ptime_upper 0 ptime_upper_265 LIX
+.%var ctime_lower 0 ctime_lower_265 LIX
+.%var ptime_lower 0 ptime_lower_265 LIX
+.%var tdelta 0 tdelta_265 LIX
+.%var shift 11 shift_265 LIX
+.%var mdata_rd 7 mdata_rd_265 LIR
+.%var mdata_wr 12 mdata_wr_265 LIW
+.%scope block 117 150
+.%var Pdelta 0 Pdelta_269 LIX
+.%var Cdelta 0 Cdelta_269 LIX
+.%var newP 0 newP_269 LIX
+.%var newC 0 newC_269 LIX
+.%scope end
+.%scope block 154 166
+.%var val 0 val_274 LIW
+.%var tmr_addr 13 tmr_addr_274 LIX
+.%scope end
+.%scope end
+.%scope function pif_meter_execute _pif_meter_execute "C:\NFP_SDK_6.0.3\p4\components\nfp_pif\me\lib\pif\src\pif_meter.c" 173 206
+.%arg meter 6 meter_275_V$4a9
+.%arg colour_in 4 colour_in_275_V$4aa
+.%arg tick 4 tick_275_V$4ab
+.%var xval32 0 xval32_275 LIX
+.%var offset 13 offset_275 LIX
+.%scope end
+.%type U4
+.%type P2 0
+.%type P3 3
+.%type U4
+.%type I4
+.%type S8 SIGNAL_PAIR{
+even 0 4;
+odd 4 4;
+}
+.%type P3 7
+.%type S32 pif_meter_data{
+bucket_P 0 0;
+bucket_C 4 0;
+__unnamed 8 8;
+last_update_low 12 0;
+PBS 16 0;
+PIR 20 0;
+config 24 0;
+reserved_word 28 0;
+}
+.%type S4 {
+__unnamed 0 9;
+last_update_high_shft 0 0;
+}
+.%type S4 last_update_high_enc{
+locked 0:31:1 0;
+reserved 0:29:2 0;
+cfg_shift 0:24:5 0;
+last_update_upper 0:0:24 0;
+}
+.%type U8
+.%type U1
+.%type S16 pif_meter_data_wr{
+bucket_P 0 0;
+bucket_C 4 0;
+last_update_high_shft 8 0;
+last_update_low 12 0;
+}
+.%type P3 11
